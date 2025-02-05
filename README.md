@@ -7,7 +7,7 @@
 - The project has been designed with TailwindCSS.
 - No Eslint error OR Eslint suppression.
 - No Spell Checker error too.
-- The optimized file is deployed in [tapaScript Cars](https://superb-yeot-414500.netlify.app/)
+- The optimized file is deployed in Netlify [tapaScript Cars](https://tapascriptcars-by-learnerofstring.netlify.app/)]
 
 ### Project Explanation
 
