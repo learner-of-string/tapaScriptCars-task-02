@@ -23,7 +23,7 @@
 
 ##### You must install nodejs, npm, and Visual Studio Code to run this code locally.
 
-### It is recommended to run this project from source code in your local machine to get the latest version.
+### Running this project from source code in your local machine is recommended to get the latest update.
 
 - First of all, clone this repository with this command:
 
