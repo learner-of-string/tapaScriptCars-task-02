@@ -45,7 +45,7 @@ const CARS = [
 
 function CarList() {
   return (
-    <ul className="flex gap-10 max-w-full">
+    <ul className="flex gap-10 max-w-full flex-wrap">
       {CARS.map((car) => (
         <li key={CARS.id} className="w-96 rounded-md shadow-2xl p-5">
           <CarBox car={car}></CarBox>
