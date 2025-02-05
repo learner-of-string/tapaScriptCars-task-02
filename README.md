@@ -25,6 +25,8 @@
 
 ### Running this project from source code in your local machine is recommended to get the latest update.
 
+##### It is recommended to run this project from source code in your local machine to get the latest version.
+
 - First of all, clone this repository with this command:
 
   ```bash
