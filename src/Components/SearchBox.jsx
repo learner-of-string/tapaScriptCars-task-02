@@ -1,4 +1,4 @@
-function Search() {
+function SearchBox() {
   return (
     <div>
       <input
@@ -10,4 +10,4 @@ function Search() {
   );
 }
 
-export default Search;
+export default SearchBox;
