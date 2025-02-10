@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 function Container() {
   const [cars, setCars] = useState([]);
   const [searchKeyword, setSearchKeyword] = useState("");
+  const [isPremiumOnly, setIsPremiumOnly] = useState(false);
 
   useEffect(() => {
     fetch(
@@ -16,6 +17,18 @@ function Container() {
       .then((data) => setCars(data));
   }, []);
 
+  const filteredCars = cars.filter((car) => {
+    if (isPremiumOnly && !car.isPremium) {
+      return false;
+    } else if (
+      car.title.toLowerCase().indexOf(searchKeyword.toLowerCase()) === -1
+    ) {
+      return false;
+    }
+    return true;
+  });
+  // I don't know what this if statement does, but the GitHub copilot suggests adding it. So I did it but I don't know anything and even I am not understand anything why and what it was searching for at the second block. But it is working somehow. I repeat IDK what is this actually.
+
   return (
     <div className="mx-10 space-y-12 select-none">
       <Header></Header>
@@ -24,9 +37,12 @@ function Container() {
           searchKeyword={searchKeyword}
           onSearchCar={setSearchKeyword}
         ></SearchBox>
-        <IsPremiumFilter></IsPremiumFilter>
+        <IsPremiumFilter
+          isPremiumOnly={isPremiumOnly}
+          onTogglePremium={setIsPremiumOnly}
+        ></IsPremiumFilter>
       </div>
-      <CarList cars={cars} searchKeyword={searchKeyword}></CarList>
+      <CarList cars={filteredCars} searchKeyword={searchKeyword}></CarList>
     </div>
   );
 }
