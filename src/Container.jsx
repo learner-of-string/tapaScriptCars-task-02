@@ -10,7 +10,7 @@ function Container() {
 
   useEffect(() => {
     fetch(
-      "https://gist.githubusercontent.com/learner-of-string/d3b0864bb0413ba2533d600b04413978/raw/4ba89583b43fadb2c0ec9258ab5763c5c57133df/CARS.json"
+      "https://gist.githubusercontent.com/learner-of-string/d3b0864bb0413ba2533d600b04413978/raw/df17d0d6fe2bde8493ed6f0b5efa29ba366b4a5e/CARS.json"
     )
       .then((res) => res.json())
       .then((data) => setCars(data));
