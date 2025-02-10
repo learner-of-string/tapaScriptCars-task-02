@@ -1,28 +1,20 @@
 import PropTypes from "prop-types";
 
-function CarDetails(props) {
-  const title = props.title;
-  const brand = props.brand;
-  const year = props.year;
-  const price = props.price;
-  const isPremium = props.isPremium;
+function CarDetails(p) {
+  const title = p.title;
+  const brand = p.brand;
+  const year = p.year;
+  const price = p.price;
+  const isPremium = p.isPremium;
 
   return (
     <>
       <h2 className="mb-2">{title}</h2>
 
-      <p>
-        Brand: <span>{brand}</span>
-      </p>
-      <p>
-        Year: <span>{year}</span>
-      </p>
-      <p>
-        Price: <span>${price}</span>
-      </p>
-      <p>
-        Premium: <span>{isPremium ? "Yes" : "No"}</span>
-      </p>
+      <p>Brand: {brand}</p>
+      <p>Year: {year}</p>
+      <p>Price: ${price}</p>
+      <p>Premium: {isPremium ? "Yes" : "No"}</p>
     </>
   );
 }

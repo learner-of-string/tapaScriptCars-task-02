@@ -3,7 +3,7 @@ import CarDetails from "./CarDetails";
 
 function CarBox({ car }) {
   return (
-    <>
+    <div className="space-y-4 w-96 rounded-md shadow-2xl border p-5">
       <CarDetails
         title={car.title}
         brand={car.brand}
@@ -11,7 +11,7 @@ function CarBox({ car }) {
         price={car.price}
         isPremium={car.isPremium}
       ></CarDetails>
-    </>
+    </div>
   );
 }
 

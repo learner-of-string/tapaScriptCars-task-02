@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 function Container() {
   const [cars, setCars] = useState([]);
+  const [searchKeyword, setSearchKeyword] = useState("");
 
   useEffect(() => {
     fetch(
@@ -16,13 +17,16 @@ function Container() {
   }, []);
 
   return (
-    <div className="mx-10 space-y-12">
+    <div className="mx-10 space-y-12 select-none">
       <Header></Header>
       <div className="flex gap-2 items-center">
-        <SearchBox></SearchBox>
+        <SearchBox
+          searchKeyword={searchKeyword}
+          onSearchCar={setSearchKeyword}
+        ></SearchBox>
         <IsPremiumFilter></IsPremiumFilter>
       </div>
-      <CarList cars={cars}></CarList>
+      <CarList cars={cars} searchKeyword={searchKeyword}></CarList>
     </div>
   );
 }
